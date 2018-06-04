@@ -7,3 +7,8 @@
 <%= link_to "編輯", edit_article_path(@article) %>
 
 <%= link_to "<< 回到文章清單", articles_path %>
+
+<h3>Comments (<%= @article.comments.count %>)</h3>
+<%= render partial: 'comment', collection: @article.comments %>
+
+<%= render partial: 'comments/form' %>
